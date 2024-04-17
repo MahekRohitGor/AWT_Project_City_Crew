@@ -17,7 +17,14 @@ City Crew is a comprehensive platform designed to facilitate the booking of home
    ```
 
 2. **Usage**:
-   - Start the server: `npm run dev`
+   - Start:
+   ```
+   cd backend
+   node index.js
+   node server.js
+   cd ../operators
+   npm run dev
+   ```
 
 ## Setup Locally MongoDB Database
 
