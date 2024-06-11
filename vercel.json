@@ -4,7 +4,7 @@
       {
         "src": "operators/package.json",
         "use": "@vercel/static-build",
-        "config": { "distDir": "operators/build" }
+        "config": { "distDir": "operators/dist" }
       },
       {
         "src": "backend/package.json",
@@ -18,7 +18,7 @@
       },
       {
         "src": "/(.*)",
-        "dest": "/operators/build/$1"
+        "dest": "/operators/dist/$1"
       }
     ]
   }
