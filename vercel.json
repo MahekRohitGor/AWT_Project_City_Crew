@@ -7,21 +7,25 @@
         "config": { "distDir": "operators/dist" }
       },
       {
-        "src": "backend/index.js",
+        "src": "backend/formApi/index.js",
         "use": "@vercel/node"
       },
       {
-        "src": "backend/server.js",
+        "src": "backend/reviewApi/index.js",
         "use": "@vercel/node"
       }
     ],
     "routes": [
       {
-        "src": "/backend/(.*)", 
-        "dest": "/backend/$1"
+        "src": "/api/submit-form", 
+        "dest": "/backend/formApi/index.js"
       },
       {
-        "src": "/(.*)", 
+        "src": "/api/reviews", 
+        "dest": "/backend/reviewApi/index.js"
+      },
+      {
+        "src": "/(.*)",
         "dest": "/operators/dist/$1"
       }
     ]
