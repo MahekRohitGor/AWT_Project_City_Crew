@@ -70,7 +70,7 @@ function Home() {
         </div>
       </div>
       <footer className="footer">
-        <p>&copy; 2024 City Crew. All rights reserved. Made by Mahek Rohit Gor (21BCP104)</p>
+        <p>&copy; 2024 City Crew. All rights reserved.</p>
       </footer>
     </div>
   );
