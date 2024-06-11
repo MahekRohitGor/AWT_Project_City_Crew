@@ -7,17 +7,21 @@
         "config": { "distDir": "operators/dist" }
       },
       {
-        "src": "backend/package.json",
+        "src": "backend/index.js",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "backend/server.js",
         "use": "@vercel/node"
       }
     ],
     "routes": [
       {
-        "src": "/api/(.*)",
-        "dest": "/backend/src/index.js"
+        "src": "/backend/(.*)", 
+        "dest": "/backend/$1"
       },
       {
-        "src": "/(.*)",
+        "src": "/(.*)", 
         "dest": "/operators/dist/$1"
       }
     ]
